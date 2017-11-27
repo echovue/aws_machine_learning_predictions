@@ -24,6 +24,6 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('com.amazonaws:aws-java-sdk:1.9.30')
+	compile('com.amazonaws:aws-java-sdk:1.11.235')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

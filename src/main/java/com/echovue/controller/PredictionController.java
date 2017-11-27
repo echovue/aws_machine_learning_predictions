@@ -22,7 +22,11 @@ public class PredictionController {
     }
 
     @RequestMapping(value = "/prediction", method = POST)
-    public Optional<Boolean> getPredication(@RequestBody Customer customer) {
-        return predictionService.getPrediction(customer);
+    public String getPredication(@RequestBody Customer customer) {
+        Optional result = predictionService.getPrediction(customer);
+        if (result.isPresent()) {
+            return "Chance of response is " + String.format("%.0f", (Float) result.get() * 100) + "%";
+        }
+        return "Error when calculate probability of response";
     }
 }
