@@ -14,9 +14,18 @@ To run the program, execute the following from the commandline:
 
 `./gradlew clean build bootRun`
 
-An example request which you can submit is:
+An example request which you can **POST** to the _/prediction_ endpoint with Content-Type set to _application/json_ is:
 
-And the response should be:
+`{"age":30,"job":"professional","marital":"married","education":"basic.9y",
+"housing":"yes","loan":"yes","contact":"cellular","month":"dec","dayOfWeek":"mon",
+"duration":487,"campaign":2,"previous":0,"emp_var_rate":-1.8,
+"cons_price_idx":92.893,"cons_conf_idx":-46.2,"euribor3m":1.313,
+"nr_employed":5099.1,"default":"no","pdays":50,"poutcome":"nonexistent"}`
+
+
+And the response should be similar to:
+
+`Chance of response is 31%`
 
 
 
